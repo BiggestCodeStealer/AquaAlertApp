@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/recImagen"
+            android:src="@drawable/img_reloj"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginVertical="10dp"
+            android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvItemId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:text="ID"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_toEndOf="@id/recImagen"/>
+
+        <TextView
+            android:id="@+id/tvItemType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvItemId"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/recImagen"
+            android:maxLines="1"
+            android:text="Descripcion"
+            android:textAlignment="center"
+            android:textColor="@color/light_blue_600"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tvItemId"
+            app:layout_constraintTop_toTopOf="@+id/tvItemId" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_toEndOf="@+id/tvItemId"
+            android:maxLines="1"
+            android:text="Nombre"
+            android:textColor="@color/light_blue_900"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemId" />
+
+        <TextView
+            android:id="@+id/tvItemDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="-45dp"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@+id/tvItemType"
+            android:text="Hora"
+            app:layout_constraintEnd_toStartOf="@+id/btnItemEdit"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="55dp"
+            android:layout_toEndOf="@+id/recImagen"
+            android:text="Tipo"
+            app:layout_constraintStart_toEndOf="@+id/tvItemName"
+            app:layout_constraintTop_toTopOf="@+id/tvItemName" />
+
+        <Button
+            android:id="@+id/btnItemDelete"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/btn_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnItemEdit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toStartOf="@+id/btnItemDelete"
+            android:background="@drawable/btn_edit"
+            app:layout_constraintEnd_toStartOf="@+id/btnItemDelete"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
